@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Northern Lights</title>
+<meta name="generator" content="WYSIWYG Web Builder 16 Trial Version - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/northernlights.css" rel="stylesheet">
+<link href="css/wb15_northernlights.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#services').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#projects']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_projects').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#reviews']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_reviews').offset().top }, 600, 'easeOutCubic');
+      });
+      $("#reviewsContainer").owlCarousel({autoplayTimeout:5000, margin: 16, autoplay: true, nav: false, loop: true, dots: true, items: 2, slideBy: 1});
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $('#navigationMenu .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+      $(document).on('click','.navigationMenu-navbar-collapse.show',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#welcome-carousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               AnimateCss('wb_welcome-text1', 'slide-left-in', 300, 1000);
+               AnimateCss('wb_welcome-text2', 'slide-right-in', 1000, 1000);
+               AnimateCss('welcome-button1', 'swash-in', 2000, 1000);
+               break;
+            case 1:
+               AnimateCss('wb_welcome-text3', 'scale-in-horizontal-center', 300, 1000);
+               AnimateCss('wb_welcome-text4', 'scale-in-vertical-center', 1000, 1000);
+               AnimateCss('welcome-button2', 'twister-down-in', 2000, 1000);
+               break;
+            case 2:
+               AnimateCss('wb_welcome-text5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcome-button3', 'vanish-in', 2000, 1000);
+               break;
+            case 5:
+               AnimateCss('wb_welcome-text4', 'transform-roll-in', 1000, 1000);
+               break;
+         }
+      });
+      $("#welcome-carousel").bootstrapcarousel({interval:6000, pause: false});
+      $("#projectsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+            case 1:
+               $('#Carousel2').bootstrapcarousel(1);
+               break;
+            case 2:
+               $('#Carousel2').bootstrapcarousel(2);
+               break;
+            case 3:
+               $('#Carousel2').bootstrapcarousel(3);
+               break;
+         }
+      });
+      $("#projectsCarousel").bootstrapcarousel({interval:3000, pause: false});
+      $("#PanelLayer").panel({animate: true, animationDuration: 200, animationEasing: 'easeOutSine', dismissible: true, display: 'overlay', position: 'bottom'});
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_headerIcon1" style="display:inline-block;width:24px;height:33px;text-align:center;z-index:0;">
+                  <a href="./wb15_northernlights.html"><div id="headerIcon1"><i class="fa fa-phone"></i></div></a>
+               </div>
+               <label for="" id="headerLabel1" style="display:inline-block;width:169px;line-height:17px;z-index:1;">Call us: +593992746339</label>
+            </div>
+            <div class="col-2">
+               <div id="wb_headerIcon2" style="display:inline-block;width:24px;height:33px;text-align:center;z-index:2;">
+                  <a href="./wb15_northernlights.html"><div id="headerIcon2"><i class="fa fa-envelope-o"></i></div></a>
+               </div>
+               <label for="" id="headerLabel2" style="display:inline-block;width:250px;line-height:17px;z-index:3;">Contact us: hdanny3@yandex.com</label>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-4">
+               <div id="wb_headerIcon3" style="display:inline-block;width:24px;height:33px;text-align:center;z-index:4;">
+                  <a href="./wb15_northernlights.html"><div id="headerIcon3"><i class="fa fa-user"></i></div></a>
+               </div>
+               <label accesskey="1234" for="" id="headerLabel3" style="display:inline-block;width:48px;line-height:17px;z-index:5;">Login</label>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationHeading" style="display:inline-block;width:100%;z-index:6;">
+                  <h1 id="navigationHeading">PAGINA DE PRUEBA</h1>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_navigationMenu" style="display:inline-block;width:100%;z-index:7;">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button title="Hamburger Menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigationMenu-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="nav-item">
+                                 <a href="https://www.youtube.com/watch?v=FvqXdvx347s" class="nav-link">YOUTUBE</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="https://my.forms.app/report/61fda1e378bc341b150b3da2" class="nav-link">RESULTADOS</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#projects" class="nav-link">Projects</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#reviews" class="nav-link">Reviews</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#contact" class="nav-link">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_welcome-carousel">
+                  <div id="welcome-carousel" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#welcome-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#welcome-carousel" data-slide-to="1"></li>
+                        <li data-target="#welcome-carousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text1">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">BIENVENIDO</span></p>
+                              </div>
+                              <div id="wb_welcome-text2">
+                                 <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">ESTAMOS FELICES DE EMPRENDER ESTE NUEVO RETO</span></p>
+                              </div>
+                              <a id="welcome-button1" href="https://skyvector.com/" target="_blank" style="display:inline-block;width:141px;height:37px;z-index:10;">SKY VECTOR</a>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text3">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">LA NUEVA ERA</span></p>
+                              </div>
+                              <div id="wb_welcome-text4">
+                                 <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">MUCHAS ANIMACIONES</span></p>
+                              </div>
+                              <a id="welcome-button2" href="https://earth.google.com/web/@0,0,0a,22251752.77375655d,35y,0h,0t,0r" target="_blank" style="display:inline-block;width:141px;height:37px;z-index:13;">PRUEBELO</a>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text5">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">LA CREACION DE UNA APLICACIÓN UTIL</span></p>
+                              </div>
+                              <div id="wb_welcome-text6">
+                                 <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">CON MUCHAS POSIBILIDADES</span><span style="font-size:27px;line-height:30px;font-weight:bold;">...</span></p>
+                              </div>
+                              <a id="welcome-button3" href="https://onlineradiobox.com/us/revolutionmiami/?cs=us.revolutionmiami&played=1" target="_blank" style="display:inline-block;width:141px;height:37px;z-index:16;">LINK DIRECTO</a>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-item-left carousel-control" href="#welcome-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-item-right carousel-control" href="#welcome-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div id="wb_servicesCard1" style="display:flex;z-index:18;">
+            <div id="servicesCard1-card-body">
+               <div id="servicesCard1-card-item0"><i class="fa fa-laptop"></i></div>
+               <div id="servicesCard1-card-item1">Managed IT Services</div>
+               <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_servicesCard2" style="display:flex;z-index:19;">
+            <div id="servicesCard2-card-body">
+               <div id="servicesCard2-card-item0"><i class="fa fa-comments-o"></i></div>
+               <div id="servicesCard2-card-item1">Digital Marketing</div>
+               <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_servicesCard3" style="display:flex;z-index:20;">
+            <div id="servicesCard3-card-body">
+               <div id="servicesCard3-card-item0"><i class="fa fa-euro"></i></div>
+               <div id="servicesCard3-card-item1">Simple Pricing</div>
+               <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_projects">
+      <div id="projects">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_projectsCarousel">
+                     <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#projectsCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_projectsText2" class="caption">
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:21px;line-height:24.5px;font-weight:bold;">Project 1</span><br/><span style="font-size:15px;line-height:16.5px;">This is a description for the first project.</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-2">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_projectsText3" class="caption">
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">Project 2</span></p>
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:15px;line-height:16.5px;">This is a description for the second project.</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-left carousel-control" href="#projectsCarousel" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control" href="#projectsCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_projectsText1">
+                     <p style="font-size:17px;line-height:20px;font-weight:bold;">Commited to data and privacy</p>
+                     <ul style="font-size:15px;line-height:16.5px;list-style-type:disc;">
+                        <li style="margin:0 0 0 24px;">Lorem ipsum dolor sit amet
+                        </li>
+                        <li style="margin:0 0 0 24px;">Consectetur adipiscing elit. 
+                        </li>
+                        <li style="margin:0 0 0 24px;">Am viverra euismod odiogravida. 
+                        </li>
+                        <li style="margin:0 0 0 24px;">Sed dui lorem.
+                        </li>
+                     </ul>
+                     <p style="font-size:15px;line-height:16.5px;"><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+                  </div>
+                  <input type="submit" id="projectsButton" name="" value="More details" style="display:inline-block;width:141px;height:37px;z-index:25;">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading1" style="display:inline-block;width:100%;z-index:26;">
+                  <h2 id="reviewsHeading1">WHAT CLIENTS SAY</h2>
+               </div>
+               <div id="wb_reviewsHeading2" style="display:inline-block;width:100%;z-index:27;">
+                  <h3 id="reviewsHeading2">Clean and Modern design is our best specialist</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer" class="owl-carousel owl-theme">
+         <div id="wb_reviewsCard1" style="display:flex;z-index:28;">
+            <div id="reviewsCard1-card-body">
+               <img id="reviewsCard1-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard1-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard1-card-item2">Developer</div>
+               <div id="reviewsCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard2" style="display:flex;z-index:29;">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard2-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard2-card-item2">Developer</div>
+               <div id="reviewsCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard3" style="display:flex;z-index:30;">
+            <div id="reviewsCard3-card-body">
+               <img id="reviewsCard3-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard3-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard3-card-item2">Developer</div>
+               <div id="reviewsCard3-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard4" style="display:flex;z-index:31;">
+            <div id="reviewsCard4-card-body">
+               <img id="reviewsCard4-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard4-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard4-card-item2">Developer</div>
+               <div id="reviewsCard4-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard5" style="display:flex;z-index:32;">
+            <div id="reviewsCard5-card-body">
+               <img id="reviewsCard5-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard5-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard5-card-item2">Developer</div>
+               <div id="reviewsCard5-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard6" style="display:flex;z-index:33;">
+            <div id="reviewsCard6-card-body">
+               <img id="reviewsCard6-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard6-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard6-card-item2">Developer</div>
+               <div id="reviewsCard6-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading" style="display:inline-block;width:100%;z-index:34;">
+                  <h2 id="contactHeading">GET IN TOUCH</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText1">
+                  <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Newsletter</span></p>
+               </div>
+               <input type="text" id="contactEmail" style="display:block;width:100%;height:35px;z-index:36;" name="email" value="" spellcheck="false" placeholder="Enter your email address">
+               <input type="submit" id="contactButton" name="" value="Submit" style="display:inline-block;width:87px;height:30px;z-index:37;">
+            </div>
+            <div class="col-2">
+               <div id="wb_contactText2">
+                  <p style="font-size:27px;line-height:30px;"><span style="font-weight:bold;">Contact Us</span></p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">#28, 3nd floor, WYSIWYG Plaza<br/>Web City<br/>Builder, WB 1969 United States</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                  <p style="font-size:13px;line-height:16px;">Phone: (123) 456-7890 </p>
+                  <p style="font-size:13px;line-height:16px;">Email: name@example.com </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:79;z-index:99999;" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_upIcon" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:39;">
+         <a href="#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="PanelLayer" style="text-align:left;">
+      <div id="wb_links">
+         <div id="links">
+            <div class="row">
+               <div class="col-1">
+                  <div class="col-1-padding">
+                     <div id="wb_linksHeading1" style="display:inline-block;width:100%;z-index:51;">
+                        <h3 id="linksHeading1">NAVIGATION</h3>
+                     </div>
+                     <div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:52;">
+                        <ul id="linksMenu1" role="menubar" class="nav">
+                           <li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="" target="_self">Home</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">About</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Services</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Products</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-2">
+                  <div class="col-2-padding">
+                     <div id="wb_linksHeading2" style="display:inline-block;width:100%;z-index:53;">
+                        <h3 id="linksHeading2">CONNECT</h3>
+                     </div>
+                     <div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:54;">
+                        <ul id="linksMenu2" role="menubar" class="nav">
+                           <li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="" target="_self">Facebook</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Instagram</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Twitter</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">YouTube</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="col-3-padding">
+                     <div id="wb_linksHeading3" style="display:inline-block;width:100%;z-index:55;">
+                        <h3 id="linksHeading3">MORE LINKS</h3>
+                     </div>
+                     <div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:56;">
+                        <ul id="linksMenu3" role="menubar" class="nav">
+                           <li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="" target="_self">Lorem&nbsp;Ipsum</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Consectetur&nbsp;Adipisicing</a>
+                           </li>
+                           <li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <picture id="wb_Picture1" style="position:absolute;left:292px;top:64px;width:95px;height:50px;z-index:82">
+      <img src="images/dua love.gif" id="Picture1" alt="" width="95" height="51">
+   </picture>
+   <div id="wb_footer" style="z-index:10000 !important;">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_footerIconMenu" style="display:inline-block;width:34px;height:24px;text-align:center;z-index:64;">
+                  <a href="#" onclick="TogglePanel('PanelLayer', event);return false;"><div id="footerIconMenu"><i class="fa fa-bars"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p style="font-size:12px;line-height:13.5px;"><span style="background-color:#FFFFFF;">C</span><span style="background-color:#FFFFFF;">opyright </span><span style="background-color:#FFFFFF;">©</span><span style="background-color:#FFFFFF;"> 2019 WYSIWYG Web Builder</span></p>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_footerIcon1" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:66;">
+                  <a href="./wb15_northernlights.html"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_footerIcon2" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:67;">
+                  <a href="./wb15_northernlights.html"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_footerIcon3" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:68;">
+                  <a href="./wb15_northernlights.html"><div id="footerIcon3"><i class="fa fa-youtube"></i></div></a>
+               </div>
+               <div id="wb_footerIcon4" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:69;">
+                  <a href="./wb15_northernlights.html"><div id="footerIcon4"><i class="fa fa-twitter"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
